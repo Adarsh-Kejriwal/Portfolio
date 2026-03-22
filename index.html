@@ -106,7 +106,20 @@
     margin: 0 auto;
     padding: 0 2rem;
   }
+.hero-photo {
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.1s forwards;
+}
 
+.hero-photo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 24px rgba(127,255,178,0.25);
+}
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -658,6 +671,9 @@
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-photo">
+  <img src="photo.jpg" alt="Adarsh Kejriwal" />
+</div>
   <div class="hero-tag">Available for opportunities</div>
   <h1 class="hero-name">
     <span class="line-accent">Adarsh</span><br>Kejriwal
