@@ -106,22 +106,24 @@
     margin: 0 auto;
     padding: 0 2rem;
   }
-.hero-photo {
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeUp 0.8s 0.1s forwards;
-}
 
-.hero-photo img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top; /* moves focus to the top (good for faces) */
-  border: 2px solid var(--accent);
-  box-shadow: 0 0 24px rgba(127,255,178,0.25);
-}
-}
+  /* HERO PHOTO — fixed: removed stray } */
+  .hero-photo {
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.1s forwards;
+  }
+
+  .hero-photo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 24px rgba(127,255,178,0.25);
+  }
+
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -673,11 +675,12 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-photo">
-  <img src="Screenshot 2026-03-22 184416.png
 
-" alt="Adarsh Kejriwal" />
-</div>
+  <!-- Photo: rename your file to remove spaces e.g. adarsh-photo.png -->
+  <div class="hero-photo">
+    <img src="adarsh-photo.png" alt="Adarsh Kejriwal" />
+  </div>
+
   <div class="hero-tag">Available for opportunities</div>
   <h1 class="hero-name">
     <span class="line-accent">Adarsh</span><br>Kejriwal
@@ -700,8 +703,6 @@
       <span class="dot"></span>GitHub
     </a>
   </div>
-  <br>
-  <hr>
 
   <!-- CV DOWNLOAD WITH PREVIEW -->
   <div class="cv-wrapper">
