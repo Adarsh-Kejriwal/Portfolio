@@ -45,6 +45,118 @@
     z-index: 0;
   }
 
+  /* CV LINK & PREVIEW */
+.cv-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 1s forwards;
+}
+
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(127,255,178,0.05);
+  transition: all 0.25s;
+}
+
+.cv-link:hover {
+  background: rgba(127,255,178,0.12);
+  box-shadow: var(--glow);
+}
+
+.cv-arrow {
+  transition: transform 0.25s;
+}
+
+.cv-link:hover .cv-arrow {
+  transform: translateX(4px);
+}
+
+.cv-preview {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  width: 280px;
+  background: var(--card);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 40px rgba(127,255,178,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.cv-wrapper:hover .cv-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cv-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-preview-title {
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.cv-preview-size {
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+
+.cv-preview-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-line {
+  height: 6px;
+  background: var(--border);
+  border-radius: 2px;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.cv-line.w80 { width: 80%; }
+.cv-line.w60 { width: 60%; }
+.cv-line.w90 { width: 90%; }
+.cv-line.w50 { width: 50%; }
+.cv-line.w70 { width: 70%; }
+.cv-line.w40 { width: 40%; }
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.cv-preview-footer {
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
   /* Floating orbs */
   .orb {
     position: fixed;
